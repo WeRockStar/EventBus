@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.squareup.otto.Produce;
 import com.squareup.otto.Subscribe;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
     @Subscribe
     public void getMessage(MessageEvent event) {
         Toast.makeText(this, "Got message " + event.getMessage(), Toast.LENGTH_SHORT).show();
+    }
+
+    @Produce
+    public MessageEvent produceMessageEvent(){
+        return new MessageEvent("Default Message Event");
     }
 
 }
