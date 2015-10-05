@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
  */
 public class ReceiverFragment extends Fragment {
 
+    private TextView text;
 
     public ReceiverFragment() {
         // Required empty public constructor
@@ -21,9 +23,18 @@ public class ReceiverFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_receiver, container, false);
+        View view =inflater.inflate(R.layout.fragment_receiver, container, false);
+        text = (TextView)view.findViewById(R.id.fragment_receiver_text);
+        return view;
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
 }

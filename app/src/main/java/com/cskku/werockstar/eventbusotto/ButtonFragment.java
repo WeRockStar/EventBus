@@ -6,13 +6,15 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ButtonFragment extends Fragment {
+public class ButtonFragment extends Fragment implements View.OnClickListener {
 
+    private EditText text;
 
     public ButtonFragment() {
         // Required empty public constructor
@@ -22,9 +24,15 @@ public class ButtonFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_button, container, false);
+        View view = inflater.inflate(R.layout.fragment_button, container, false);
+        view.findViewById(R.id.fragment_button_send).setOnClickListener(this);
+        text = (EditText) view.findViewById(R.id.fragment_button_text);
+        return view;
     }
 
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }
