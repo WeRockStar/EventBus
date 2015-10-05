@@ -16,11 +16,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:id="@+id/activity_main_button"
         tools:layout="@layout/fragment_button" />
 
     <fragment
         android:id="@+id/activity_main_receiver_1"
-        android:name="com.cskku.werockstar.eventbusotto.ReceiverFragment"
+        class="com.cskku.werockstar.eventbusotto.ReceiverFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"

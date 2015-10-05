@@ -4,12 +4,13 @@
     android:layout_height="wrap_content"
     android:background="#aaa"
     android:orientation="horizontal"
-    tools:context="com.cskku.werockstar.eventbusotto.ButtonFragment">
+    >
 
     <EditText
         android:id="@+id/fragment_button_text"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:textColor="#fff"
         android:layout_weight="1" />
 
     <Button

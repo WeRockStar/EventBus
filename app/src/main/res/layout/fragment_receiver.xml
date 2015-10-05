@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="com.cskku.werockstar.eventbusotto.ReceiverFragment">
+    >
 
     <TextView
         android:id="@+id/fragment_receiver_text"
@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:background="#aaa"
         android:padding="16dp"
+        android:textColor="#fff"
         android:text="Nothing receiver yet!" />
 
 </LinearLayout>
